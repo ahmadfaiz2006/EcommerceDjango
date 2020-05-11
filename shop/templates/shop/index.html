@@ -48,7 +48,7 @@
     
     <div class ="container">
       {% for product,range,nSlides in allProds %}
-      <h1>categories</h1>
+      <h1>{{product.0.category}}</h1>
 
     <div id = "demo{{forloop.counter}}" class = "carousel slide my-f3" data-ride="carousel">
       <ul class="carousel-indicators"> 
