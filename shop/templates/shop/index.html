@@ -52,7 +52,7 @@
 
     <div id = "demo{{forloop.counter}}" class = "carousel slide my-f3" data-ride="carousel">
       <ul class="carousel-indicators"> 
-        <li data-target="#demo" data-slide-to ="0" class="active"></li>
+        <li data-target="#demo{{forloop.counter}}" data-slide-to ="0" class="active"></li>
 
         {% for i in range%}
         <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to ="{{i}}" ></li>
