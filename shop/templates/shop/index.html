@@ -123,6 +123,8 @@
     localStorage.setItem('cart',JSON.stringify(cart));
     document.getElementById('cart').innerHTML = Object.keys(cart).length  ;
   });
+  $("#popcart").popover();
+  document.getElementById('popcart').setAttribute("data-content",'<h6>All the Shopping items are present in your cart</h6>')
 </script>
 {% endblock %}
 
