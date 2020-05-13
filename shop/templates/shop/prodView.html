@@ -32,28 +32,5 @@
 {% endblock %}
 
 {% block js%}
-<script>
-  if(localStorage.getItem('cart') == null){
-    var cart = {};
-  }
-  else{
-    cart = JSON.parse(localStorage.getItem('cart'));
-  }
-  $('.cart').click(function(){
-    console.log("clicked")
-    var idstr = this.id.toString();
-    
-    if(cart[idstr] != undefined){
-      cart[idstr] = cart[idstr] + 1;
-    }
-    else{
-      cart[idstr] = 1
-    }
-    console.log(cart);
-    localStorage.setItem('cart',JSON.stringify(cart));
-    document.getElementById('cart').innerHTML = Object.keys(cart).length  ;
-  });
-  $("#popcart").popover();
-  document.getElementById('popcart').setAttribute("data-content",'<h6>All the Shopping items are present in your cart</h6>')
-</script>
+
 {% endblock %}
