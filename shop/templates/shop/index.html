@@ -47,9 +47,11 @@
 
     {% load static %}
     
-    <div class ="container">
+    <div class ="container my-3">
       {% for product,range,nSlides in allProds %}
+      <div class="my-4">
       <h3>{{product.0.category}}</h3>
+    </div>
     <div class = "row">
 
     <div id = "demo{{forloop.counter}}" class = "col carousel slide my-f3" data-ride="carousel">
