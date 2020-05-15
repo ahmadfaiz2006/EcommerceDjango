@@ -196,7 +196,14 @@ sagittis lacus vel augue laoreet rutrum faucibus."
         a = this.id.slice(7);
         cart["pr" + a] = cart["pr" + a] - 1;
         cart["pr" + a] = Math.max(0, cart["pr" + a]);
-        document.getElementById("valpr" + a).innerHTML = cart["pr" + a];
+        //document.getElementById("valpr" + a).innerHTML = cart["pr" + a];
+        if(cart['pr'+ a] == 0){
+          document.getElementById('divpr'+ a).innerHTML = "<button id ='pr"+a+"' class = 'btn btn-outline-info cart'>Add to Cart</button>";
+          delete cart['pr' + a];
+        }
+        else{
+          document.getElementById("valpr" + a).innerHTML = cart["pr" + a];
+        }
         updateCart(cart);
       });
       $(".divpr").on("click", "button.plus", function () {
